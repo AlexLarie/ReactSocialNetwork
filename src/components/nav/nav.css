@@ -1,0 +1,20 @@
+.nav{
+   grid-area: nav;
+   background-color: rgb(255, 255, 255);
+   padding: 5px;
+}
+
+.nav div:last-child{
+   margin-top: 20px;
+}
+
+.nav a{
+   width: 100%;
+   display: flex;
+   justify-content: start;
+   padding: 5px;
+   margin-bottom: 5px;
+   text-decoration: none;
+   color: black;
+   background-color: rgb(133, 202, 219);
+}

@@ -1,0 +1,16 @@
+.content__button{
+   margin-left: 10px;
+   border-radius: 5px;
+}
+
+.content__new {
+   display: grid;
+   grid-template-columns: 1fr 80px;
+   padding: 10px;
+}
+
+.content__new textarea{
+   min-height: 50px;
+   padding: 5px;
+   border-radius: 5px;
+}

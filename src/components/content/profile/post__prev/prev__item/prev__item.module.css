@@ -1,0 +1,40 @@
+.prev__item{
+   min-height: 50px;
+   padding: 10px;
+   margin-bottom: 10px;
+   border-radius: 5px;
+   display: grid;
+   grid-template-columns: 50px 1fr;
+   grid-gap: 10px;
+   position: relative;
+}
+
+.prev__text{
+   background-color: grey;
+   padding: 5px;
+   border-radius: 5px;
+}
+
+.prev__img img{
+   border-radius: 50%;
+   overflow: hidden;
+}
+
+.prev__item:last-child{
+   margin-bottom: 0px;
+}
+
+.prev__likes{
+   color: brown;
+   position: absolute;
+   bottom: -12px;
+   right: 10px;
+   font-weight: 700;
+}
+
+.prev__likes button{
+   padding: 2px 5px;
+   background-color: rgb(222, 135, 135);
+   font-size: 15px;
+   border-radius: 10px;
+}
