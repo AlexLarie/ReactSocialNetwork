@@ -18,6 +18,8 @@
 .prev__img img{
    border-radius: 50%;
    overflow: hidden;
+   width: 100%;
+   object-fit: cover;
 }
 
 .prev__item:last-child{

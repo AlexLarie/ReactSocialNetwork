@@ -7,7 +7,7 @@ import './content.css';
 const Content = () => {
    return(
       <div className = "content">
-         <img src = "https://via.placeholder.com/1000x200" alt = "wrapper"/>
+         <img src = "https://via.placeholder.com/1000x200" alt = "wrapper" className = 'content__img'/>
          <Profile name = 'Alexei' date = '16.03.1995' web = 'alg.by' family = 'Married'/>
          <Post__new/>
          <Post__prev/>

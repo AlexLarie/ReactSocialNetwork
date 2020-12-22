@@ -17,4 +17,10 @@
    text-decoration: none;
    color: black;
    background-color: rgb(133, 202, 219);
+   transition: all .3s ease;
+}
+
+.nav a.active {
+   background-color: gold;
+   transition: all .3s ease;
 }

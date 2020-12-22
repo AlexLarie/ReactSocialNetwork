@@ -1,0 +1,26 @@
+.message__wrapper{
+   margin-bottom: 10px;
+   background-color: rgba(41, 59, 160, 0.767);
+   padding: 10px;
+   margin-right: 10px;
+   border-radius: 10px;
+}
+
+.message__avatar{
+   display: grid;
+   grid-template-columns: 40px 1fr 1fr;
+   grid-gap: 10px;
+   margin-bottom: 10px;
+}
+
+.message__avatar img{
+   width: 100%;
+   object-fit: cover;
+   border-radius: 50%;
+}
+
+.message__time{
+   color: rgb(255, 255, 255);
+   display: flex;
+   justify-content: flex-end;
+}

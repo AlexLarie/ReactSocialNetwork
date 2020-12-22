@@ -1,0 +1,29 @@
+.title{
+   text-transform: uppercase;
+}
+
+.dialogs{
+   padding: 10px;
+   height: 100%;
+}
+
+.dialogs__wrapper{
+   display: grid;
+   grid-template: 1fr / 30% 70%;
+   height: 95%;
+   /* grid-gap: 10px; */
+   margin-top: 20px;
+}
+
+.dialogs__senders{
+   /* border-right: 3px solid grey; */
+   height: 100%;
+}
+
+.dialogs__block{
+   display: grid;
+   grid-template-rows: 1fr minmax(50px, 100px);
+   background-color: rgb(255, 255, 255);
+   border-radius: 10px;
+   padding: 10px 0px 10px 10px;
+}
