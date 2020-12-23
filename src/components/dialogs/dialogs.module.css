@@ -4,7 +4,8 @@
 
 .dialogs{
    padding: 10px;
-   height: 100%;
+   max-height: calc(100vh - 180px);
+   overflow: hidden;
 }
 
 .dialogs__wrapper{
@@ -17,13 +18,7 @@
 
 .dialogs__senders{
    /* border-right: 3px solid grey; */
-   height: 100%;
-}
-
-.dialogs__block{
-   display: grid;
-   grid-template-rows: 1fr minmax(50px, 100px);
-   background-color: rgb(255, 255, 255);
-   border-radius: 10px;
-   padding: 10px 0px 10px 10px;
+   height: calc(100vh - 220px);
+   overflow-y: auto;
+   overflow-x: hidden;
 }
