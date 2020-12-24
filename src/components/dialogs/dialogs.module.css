@@ -18,7 +18,7 @@
 
 .dialogs__senders{
    /* border-right: 3px solid grey; */
-   height: calc(100vh - 220px);
+   height: calc(100vh - 240px);
    overflow-y: auto;
    overflow-x: hidden;
 }

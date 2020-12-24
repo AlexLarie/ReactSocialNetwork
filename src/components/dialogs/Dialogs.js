@@ -1,22 +1,11 @@
 import React from 'react';
 import classes from './dialogs.module.css';
 import Sender from './Sender/Sender';
-import Message__list from './Messages/Message__list';
+import MessageList from './Messages/MessageList';
 
 
-let dialogsData = [
-   {id : "1",
-   name : "Kristina"},
-   {id : "2",
-   name : "Aliaksei"},
-   {id : "3",
-   name : "Kastus"},
-]
-
-let Senders = dialogsData.map(item => <Sender name = {item.name} id = {item.id}/>)
-
-
-const Dialogs = () => {
+const Dialogs = (props) => {
+   let Senders = props.data.dialogs.map(item => <Sender name = {item.name} id = {item.id}/>)
    return (
       <div className = {classes.dialogs}>
          <span className = {classes.title}>
@@ -26,7 +15,7 @@ const Dialogs = () => {
             <div className = {classes.dialogs__senders}>
                {Senders}
             </div>
-            <Message__list/>
+            <MessageList messages = {props.data.messages}/>
          </div>
       </div>
    )

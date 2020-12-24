@@ -11,18 +11,19 @@ import News from './components/news/News';
 import Musick from './components/musick/Musick';
 import Settings from './components/settings/Settings';
 
-function App() {
+
+function App(props) {
   return (
     <BrowserRouter>
       <div className="wrapper">
         <Header/>
         <Nav/>
         <div className = "content">
-          <Route path='/profile' component={Content}/>
-          <Route path='/dialogs' component={Dialogs}/>
-          <Route path='/news' component={News}/>
-          <Route path='/musick' component={Musick}/>
-          <Route path='/settings' component={Settings}/>
+          <Route path='/profile' render={()=> <Content data = {props.state.profilePage}/>}/>
+          <Route path='/dialogs' render={()=> <Dialogs data = {props.state.dialogsPage}/>}/>
+          <Route path='/news' render={()=> <News/>}/>
+          <Route path='/musick' render={()=> <Musick/>}/>
+          <Route path='/settings' render={()=> <Settings/>}/>
         </div>
         <Footer/>
       </div>

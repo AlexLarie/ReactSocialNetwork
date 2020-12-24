@@ -10,7 +10,7 @@ const PrevItem = (props) => {
          <div className = {classes.prev__text}>
             {props.text}
             <span className = {classes.prev__likes}>
-               <button>like</button>:{props.likes}
+               <button>like</button>{props.likes}
             </span>
          </div>
       </div>
