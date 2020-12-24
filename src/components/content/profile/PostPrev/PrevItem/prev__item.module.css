@@ -1,6 +1,6 @@
 .prev__item{
    min-height: 50px;
-   padding: 10px;
+   padding: 10px 0px;
    margin-bottom: 10px;
    border-radius: 5px;
    display: grid;
