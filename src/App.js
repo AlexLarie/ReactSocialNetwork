@@ -19,7 +19,7 @@ function App(props) {
         <Header/>
         <Nav/>
         <div className = "content">
-          <Route path='/profile' render={()=> <Content data = {props.state.profilePage}/>}/>
+          <Route path='/profile' render={()=> <Content data = {props.state.profilePage} addPost = {props.addPost} newTextChange = {props.newTextChange}/>}/>
           <Route path='/dialogs' render={()=> <Dialogs data = {props.state.dialogsPage}/>}/>
           <Route path='/news' render={()=> <News/>}/>
           <Route path='/musick' render={()=> <Musick/>}/>
