@@ -10,9 +10,17 @@
 }
 
 .prev__text{
+   display: grid;
+   grid-template-columns: 70% 30%;
    background-color: grey;
    padding: 5px;
    border-radius: 5px;
+}
+
+.prev__date{
+   display: flex;
+   justify-content: flex-end;
+   color: white;
 }
 
 .prev__img img{

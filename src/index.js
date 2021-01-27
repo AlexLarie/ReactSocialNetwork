@@ -1,10 +1,24 @@
 import './index.css';
-import state from './redax/state';
+import store from './redax/state';
 import reportWebVitals from './reportWebVitals';
-import {rerenderEntireTree} from './redax/render';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
 
+let rerenderEntireTree = (state) => {
+   ReactDOM.render(
+      <React.StrictMode>
+         <App state = {state} changeLikes = {store.changeLikes.bind(store)} dispatch = {store.dispatch.bind(store)} changeNewMessageState = {store.changeNewMessageState.bind(store)} 
+         createNewMessageItem = {store.createNewMessageItem.bind(store)}/>
+      </React.StrictMode>,
+      document.getElementById('root')
+   );
+};
 
-rerenderEntireTree(state);
+rerenderEntireTree(store.getState());
+
+store.subscribe(rerenderEntireTree);
 
 
 // If you want to start measuring performance in your app, pass a function

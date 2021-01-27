@@ -1,18 +1,31 @@
 import React from 'react';
+import { addPostActionCreator, newTextChangActionCreator } from '../../../../redax/state';
 import classes from './post__new.module.css';
 
+// let addPostActionCreator = () => {
+//    return {
+//       type: 'ADD-POST'
+//    }
+// }
+
+// let newTextChangActionCreator = (newText) => {
+//    return {
+//       type: 'NEW-TEXT-CHANGE',
+//       newText: newText
+//    }
+// }
 
 const Post__new = (props) => {
 
    let newPostElemet = React.createRef();
 
    let newPost = () => {
-      props.addPost();
+      props.dispatch(addPostActionCreator());
    }
 
    let newPostOnChange = () => {
       let newText = newPostElemet.current.value;
-      props.newTextChange(newText);
+      props.dispatch(newTextChangActionCreator(newText));
    }
 
    return(

@@ -1,17 +1,23 @@
 import React from 'react';
 import './createMessage.css';
 
-const CreateMessage = () => {
+
+
+const CreateMessage = (props) => {
    let newMessage = React.createRef();
 
    let createMessage = () => {
-      let message = newMessage.current.value;
-      alert (message);
+      props.createNewMessageItem(newMessageChange);
    }
 
+   let newMessageChange = () => {
+      let newMessageText = newMessage.current.value;
+      props.changeNewMessageState(newMessageText);
+      return newMessageText;
+   }
    return (
       <div className = 'new__message'>
-         <textarea ref = {newMessage} placeholder = 'Write your message here'/>
+         <textarea value = {props.newMessage} ref = {newMessage} onChange = {newMessageChange} placeholder = 'Write your message here'/>
          <button onClick = {createMessage}>Submit</button>
       </div>
    )

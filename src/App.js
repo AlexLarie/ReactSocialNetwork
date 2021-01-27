@@ -19,8 +19,8 @@ function App(props) {
         <Header/>
         <Nav/>
         <div className = "content">
-          <Route path='/profile' render={()=> <Content data = {props.state.profilePage} addPost = {props.addPost} newTextChange = {props.newTextChange}/>}/>
-          <Route path='/dialogs' render={()=> <Dialogs data = {props.state.dialogsPage}/>}/>
+          <Route path='/profile' render={()=> <Content changeLikes = {props.changeLikes} data = {props.state.profilePage} dispatch = {props.dispatch}/>}/>
+          <Route path='/dialogs' render={()=> <Dialogs data = {props.state.dialogsPage} createNewMessageItem = {props.createNewMessageItem} changeNewMessageState = {props.changeNewMessageState}/>}/>
           <Route path='/news' render={()=> <News/>}/>
           <Route path='/musick' render={()=> <Musick/>}/>
           <Route path='/settings' render={()=> <Settings/>}/>

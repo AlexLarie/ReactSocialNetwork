@@ -9,8 +9,11 @@ const PrevItem = (props) => {
          </div>
          <div className = {classes.prev__text}>
             {props.text}
+            <div className = {classes.prev__date}>
+               {props.date}
+            </div>
             <span className = {classes.prev__likes}>
-               <button>like</button>{props.likes}
+               <button onClick = {props.changeLikes}>like</button><span id = {props.id}>{props.likes}</span>
             </span>
          </div>
       </div>
