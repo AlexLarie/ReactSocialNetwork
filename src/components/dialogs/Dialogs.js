@@ -15,7 +15,7 @@ const Dialogs = (props) => {
             <div className = {classes.dialogs__senders}>
                {Senders}
             </div>
-            <MessageList createNewMessageItem = {props.createNewMessageItem} changeNewMessageState = {props.changeNewMessageState} messages = {props.data.messages} newMessage = {props.data.newMessage}/>
+            <MessageList dispatch = {props.dispatch} messages = {props.data.messages} newMessage = {props.data.newMessage}/>
          </div>
       </div>
    )

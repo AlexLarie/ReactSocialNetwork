@@ -11,7 +11,7 @@ const MessageList = (props) => {
          <div className = 'prev__messages'>
             {messagesList}
          </div>
-         < CreateMessage createNewMessageItem = {props.createNewMessageItem} newMessage = {props.newMessage} changeNewMessageState = {props.changeNewMessageState}/>
+         < CreateMessage dispatch = {props.dispatch} newMessage = {props.newMessage} />
       </div>
    )
 }
