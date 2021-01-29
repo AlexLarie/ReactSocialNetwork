@@ -6,6 +6,28 @@ const CHANGE_NEW_MESSAGE = 'CHANGE-NEW-MESSAGE';
 
 let store = {
    _state : {
+      newsPage:{
+         news: [
+            {from: "Kristina",
+            date: "02.20.02",
+            text: "Some content inside news",
+            likes: "12",
+            comments: [],
+            },
+            {from: "Alfred",
+            date: "04.10.02",
+            text: "Some content content content content content inside news",
+            likes: "122",
+            comments: [],
+            },
+            {from: "Katrin",
+            date: "02.20.02",
+            text: "Some inside news inside news inside news v inside news inside news content inside news",
+            likes: "32",
+            comments: [],
+            },
+         ],
+      },
       dialogsPage:{
          messages: [
             

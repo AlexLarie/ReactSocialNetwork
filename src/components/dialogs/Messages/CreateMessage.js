@@ -20,7 +20,7 @@ const CreateMessage = (props) => {
    }
 
    let enterMessage = (e) => {
-      if (e.key === 'Enter' && e.ctrlKey == true){
+      if (e.key == 'Enter' && e.ctrlKey == true){
          createMessage();
       } 
    }

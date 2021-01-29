@@ -21,7 +21,7 @@ function App(props) {
         <div className = "content">
           <Route path='/profile' render={()=> <Content changeLikes = {props.changeLikes} data = {props.state.profilePage} dispatch = {props.dispatch}/>}/>
           <Route path='/dialogs' render={()=> <Dialogs data = {props.state.dialogsPage} dispatch = {props.dispatch}/>}/>
-          <Route path='/news' render={()=> <News/>}/>
+          <Route path='/news' render={()=> <News dispatch = {props.dispatch} data = {props.state.newsPage}/>}/>
           <Route path='/musick' render={()=> <Musick/>}/>
           <Route path='/settings' render={()=> <Settings/>}/>
         </div>
