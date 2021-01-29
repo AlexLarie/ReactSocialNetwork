@@ -4,7 +4,7 @@ import NewsItem from "./NewsItem";
 
 const News = (props) => {
    console.log(props.data.news)
-   let news = props.data.news.map(item => <NewsItem text = {item.text} from = {item.from} likes = {item.likes} date = {item.date}/>
+   let news = props.data.news.map(item => <NewsItem text = {item.text} name = {item.name} likes = {item.likes} date = {item.date} id = {item.id}/>
    )
    return (
       <div className = {classes.news}>

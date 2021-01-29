@@ -5,11 +5,11 @@ const NewsItem = (props) => {
    return (
       <div className = {classes.news__item}>
          <div className = {classes.item__info}>
-            <div>{props.from}</div>
-            <div>{props.date}</div>
+            <div className = {classes.from}>{props.name}</div>
+            <div className = {classes.date}>{props.date}</div>
          </div>
-            <div>{props.text}</div>
-            <div>{props.likes}</div>
+            <div className = {classes.text}>{props.text}</div>
+            <div className = {classes.likes}>{props.likes}</div>
       </div>
    )
 }

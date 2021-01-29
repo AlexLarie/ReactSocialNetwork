@@ -8,24 +8,24 @@ let store = {
    _state : {
       newsPage:{
          news: [
-            {from: "Kristina",
-            date: "02.20.02",
-            text: "Some content inside news",
-            likes: "12",
-            comments: [],
-            },
-            {from: "Alfred",
-            date: "04.10.02",
-            text: "Some content content content content content inside news",
-            likes: "122",
-            comments: [],
-            },
-            {from: "Katrin",
-            date: "02.20.02",
-            text: "Some inside news inside news inside news v inside news inside news content inside news",
-            likes: "32",
-            comments: [],
-            },
+            // {name: "Kristina",
+            // date: "02.20.02",
+            // text: "Some content inside news",
+            // likes: "12",
+            // comments: [],
+            // },
+            // {name: "Alfred",
+            // date: "04.10.02",
+            // text: "Some content content content content content inside news",
+            // likes: "122",
+            // comments: [],
+            // },
+            // {name: "Katrin",
+            // date: "02.20.02",
+            // text: "Some inside news inside news inside news v inside news inside news content inside news",
+            // likes: "32",
+            // comments: [],
+            // },
          ],
       },
       dialogsPage:{
@@ -86,17 +86,17 @@ let store = {
    //    this._state.profilePage.newPostText = '';
    //    this.rerenderEntireTree(this._state);
    // },
-   createNewMessageItem () {
-      let newMessage = {
-         id: '3', 
-         message: this._state.dialogsPage.newMessage, 
-         name : 'you', 
-         time :   Date() 
-      }
-      this._state.dialogsPage.messages.push(newMessage);
-      this._state.dialogsPage.newMessage = '';
-      this.rerenderEntireTree(this._state);
-   },
+   // createNewMessageItem () {
+   //    let newMessage = {
+   //       id: '3', 
+   //       message: this._state.dialogsPage.newMessage, 
+   //       name : 'you', 
+   //       time :   Date() 
+   //    }
+   //    this._state.dialogsPage.messages.push(newMessage);
+   //    this._state.dialogsPage.newMessage = '';
+   //    this.rerenderEntireTree(this._state);
+   // },
    // newTextChange(newText){
    //    this._state.profilePage.newPostText=newText;
    //    this.rerenderEntireTree(this._state);
@@ -116,13 +116,14 @@ let store = {
          this._state.profilePage.lastId++
          let newPost= {
             id: this._state.profilePage.lastId,
-            name: 'you',
+            name: 'Aliaksei',
             text: this._state.profilePage.newPostText,
             likes: '0',
             date: Date()
          }
          if (newPost.text != false){
             this._state.profilePage.posts.push(newPost);
+            this._state.newsPage.news.push(newPost);
          }
          this._state.profilePage.newPostText = '';
          this.rerenderEntireTree(this._state);
