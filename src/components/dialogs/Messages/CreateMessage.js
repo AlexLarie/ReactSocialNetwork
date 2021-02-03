@@ -1,5 +1,6 @@
 import React from 'react';
-import { changeNewMessageStateActionCreator, createMessageItemActionCreator } from '../../../redax/state';
+import { changeNewMessageStateActionCreator, createMessageItemActionCreator } from '../../../redax/dialogs-reducer';
+
 import './createMessage.css';
 
 

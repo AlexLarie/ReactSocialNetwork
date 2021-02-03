@@ -1,31 +1,19 @@
-const ADD_POST = 'ADD-POST';
-const NEW_TEXT_CHANGE = 'NEW-TEXT-CHANGE';
-const CREATE_NEW_MESSAGE_ITEM = 'CREATE-NEW-MESSAGE-ITEM';
-const CHANGE_NEW_MESSAGE = 'CHANGE-NEW-MESSAGE';
+import dialogsReducer from "./dialogs-reducer";
+import newsReducer from "./news-reducer";
+import profileReducer from "./profile-reducer";
+
+// const ADD_POST = 'ADD-POST';
+// const NEW_TEXT_CHANGE = 'NEW-TEXT-CHANGE';
+// const CREATE_NEW_MESSAGE_ITEM = 'CREATE-NEW-MESSAGE-ITEM';
+// const CHANGE_NEW_MESSAGE = 'CHANGE-NEW-MESSAGE';
+
 
 
 let store = {
    _state : {
       newsPage:{
          news: [
-            // {name: "Kristina",
-            // date: "02.20.02",
-            // text: "Some content inside news",
-            // likes: "12",
-            // comments: [],
-            // },
-            // {name: "Alfred",
-            // date: "04.10.02",
-            // text: "Some content content content content content inside news",
-            // likes: "122",
-            // comments: [],
-            // },
-            // {name: "Katrin",
-            // date: "02.20.02",
-            // text: "Some inside news inside news inside news v inside news inside news content inside news",
-            // likes: "32",
-            // comments: [],
-            // },
+            
          ],
       },
       dialogsPage:{
@@ -110,71 +98,59 @@ let store = {
    },
 
    dispatch(action){
+      this._state.profilePage = profileReducer(this._state.profilePage, action);
+      this._state.dialogsPage = dialogsReducer(this._state.dialogsPage, action);
+      this._state.newsPage = newsReducer(this._state.newsPage, action);
+      this.rerenderEntireTree(this._state);
+
+      // if (action.type === ADD_POST){
+      //    this._state.profilePage.lastId++
+      //    let newPost= {
+      //       id: this._state.profilePage.lastId,
+      //       name: 'Aliaksei',
+      //       text: this._state.profilePage.newPostText,
+      //       likes: '0',
+      //       date: Date()
+      //    }
+      //    if (newPost.text != false){
+      //       this._state.profilePage.posts.push(newPost);
+      //       this._state.newsPage.news.push(newPost);
+      //    }
+      //    this._state.profilePage.newPostText = '';
+      //    this.rerenderEntireTree(this._state);
 
 
-      if (action.type === ADD_POST){
-         this._state.profilePage.lastId++
-         let newPost= {
-            id: this._state.profilePage.lastId,
-            name: 'Aliaksei',
-            text: this._state.profilePage.newPostText,
-            likes: '0',
-            date: Date()
-         }
-         if (newPost.text != false){
-            this._state.profilePage.posts.push(newPost);
-            this._state.newsPage.news.push(newPost);
-         }
-         this._state.profilePage.newPostText = '';
-         this.rerenderEntireTree(this._state);
+      // } else if (action.type === NEW_TEXT_CHANGE){
+      //    this._state.profilePage.newPostText = action.newText;
+      //    this.rerenderEntireTree(this._state);
 
 
-      } else if (action.type === NEW_TEXT_CHANGE){
-         this._state.profilePage.newPostText = action.newText;
-         this.rerenderEntireTree(this._state);
+      // } else if (action.type === CREATE_NEW_MESSAGE_ITEM){
+      //    let newMessage = {
+      //       id: '3', 
+      //       message: this._state.dialogsPage.newMessage,
+      //       name : 'you', 
+      //       time :   Date() 
+      //    }
+      //    if (newMessage.message != false){
+      //       this._state.dialogsPage.messages.push(newMessage);
+      //    }
+      //    this._state.dialogsPage.newMessage = '';
+      //    this.rerenderEntireTree(this._state);
 
 
-      } else if (action.type === CREATE_NEW_MESSAGE_ITEM){
-         let newMessage = {
-            id: '3', 
-            message: this._state.dialogsPage.newMessage,
-            name : 'you', 
-            time :   Date() 
-         }
-         if (newMessage.message != false){
-            this._state.dialogsPage.messages.push(newMessage);
-         }
-         this._state.dialogsPage.newMessage = '';
-         this.rerenderEntireTree(this._state);
-
-
-      } else if (action.type === CHANGE_NEW_MESSAGE){
-         this._state.dialogsPage.newMessage = action.newMessageText;
-         this.rerenderEntireTree(this._state);
-      }
+      // } else if (action.type === CHANGE_NEW_MESSAGE){
+      //    this._state.dialogsPage.newMessage = action.newMessageText;
+      //    this.rerenderEntireTree(this._state);
+      // }
+      
    }
 }
 
 
 
-export const addPostActionCreator = () => ({
-   type: ADD_POST
-})
 
-export const newTextChangActionCreator = (newText) => ({
-   type: NEW_TEXT_CHANGE,
-   newText: newText
-})
 
-export const createMessageItemActionCreator = (newMessageChange)=> ({
-   type: CREATE_NEW_MESSAGE_ITEM,
-   newMessageChange: newMessageChange
-})
-
-export const changeNewMessageStateActionCreator = (text) => ({
-   type: CHANGE_NEW_MESSAGE,
-   newMessageText: text
-})
 
 
 // let rerenderEntireTree = () => {

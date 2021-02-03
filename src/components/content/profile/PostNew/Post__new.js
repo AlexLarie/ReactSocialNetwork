@@ -1,5 +1,6 @@
 import React from 'react';
-import { addPostActionCreator, newTextChangActionCreator } from '../../../../redax/state';
+import { addPostActionCreator, newTextChangActionCreator } from '../../../../redax/profile-reducer';
+
 import classes from './post__new.module.css';
 
 // let addPostActionCreator = () => {
