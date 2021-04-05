@@ -25,18 +25,14 @@ const Post__new = (props) => {
    // }
 
    // let newPostOnChange = () => {
-// let newText = newPostElemet.current.value;
+   console.log(newPostElemet.current);
    //    props.newPostChange(newText);
    //    //props.dispatch(newTextChangActionCreator(newText));
    // }
 
    return(
       <div className = {classes.content__new}>
-         <textarea onChange = {()=>{
-            let newText = newPostElemet.current.value;
-            props.newPostChange(newText)
-            }} 
-            placeholder = "Write something and post it!" value = {props.newPostText} ref = {newPostElemet} ></textarea>
+         <textarea onChange = {props.newPostChange(newText)} placeholder = "Write something and post it!" value = {props.newPostText} ref = {newPostElemet} ></textarea>
          <button onClick = {props.newPost} className={classes.content__button}>Post it</button> 
       </div>
    )

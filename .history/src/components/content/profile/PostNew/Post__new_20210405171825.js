@@ -19,24 +19,20 @@ const Post__new = (props) => {
 
    let newPostElemet = React.createRef();
 
-   // let newPost = () => {
-   //    //props.dispatch(addPostActionCreator());
-   //    props.newPost()
-   // }
+   let newPost = () => {
+      //props.dispatch(addPostActionCreator());
+      props.newPost()
+   }
 
-   // let newPostOnChange = () => {
-// let newText = newPostElemet.current.value;
-   //    props.newPostChange(newText);
-   //    //props.dispatch(newTextChangActionCreator(newText));
-   // }
+   let newPostOnChange = () => {
+      let newText = newPostElemet.current.value;
+      props.newPostChange(newText);
+      //props.dispatch(newTextChangActionCreator(newText));
+   }
 
    return(
       <div className = {classes.content__new}>
-         <textarea onChange = {()=>{
-            let newText = newPostElemet.current.value;
-            props.newPostChange(newText)
-            }} 
-            placeholder = "Write something and post it!" value = {props.newPostText} ref = {newPostElemet} ></textarea>
+         <textarea onChange = {props.newPostOnChange} placeholder = "Write something and post it!" value = {props.newPostText} ref = {newPostElemet} ></textarea>
          <button onClick = {props.newPost} className={classes.content__button}>Post it</button> 
       </div>
    )

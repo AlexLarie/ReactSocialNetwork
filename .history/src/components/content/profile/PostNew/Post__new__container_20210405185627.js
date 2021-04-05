@@ -21,11 +21,12 @@ const Post__new__container = (props) => {
    let newPost = () => {
       // props.addPost();
       props.dispatch(addPostActionCreator());
+      console.log('change')
    }
 
    let newPostChange = (newText) => {
       //props.updateNewPostText(newText);
-
+      
       props.dispatch(newTextChangActionCreator(newText));
       
    }

@@ -13,7 +13,7 @@ const Content = (props) => {
          <Profile name = 'Alexei' date = '16.03.1995' web = 'alg.by' family = 'Married'/>
          <Post__new__container addPost = {props.addPost} updateNewPostText = {props.updateNewPostText} 
           dispatch = {props.dispatch} 
-          newPostText = {props.data.newPostText}
+          //newPostText = {props.data.newPostText}
          />
          <Post__prev changeLikes = {props.changeLikes} posts = {props.data.posts}/>
       </div>

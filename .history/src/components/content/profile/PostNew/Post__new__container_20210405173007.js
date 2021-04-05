@@ -19,15 +19,13 @@ import Post__new from './Post__new';
 const Post__new__container = (props) => {
 
    let newPost = () => {
-      // props.addPost();
+      props.addPost();
       props.dispatch(addPostActionCreator());
    }
 
    let newPostChange = (newText) => {
-      //props.updateNewPostText(newText);
-
-      props.dispatch(newTextChangActionCreator(newText));
-      
+      props.updateNewPostText(newText);
+      //props.dispatch(newTextChangActionCreator(newText));
    }
 
    return(

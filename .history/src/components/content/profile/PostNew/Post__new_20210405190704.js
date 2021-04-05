@@ -35,8 +35,7 @@ const Post__new = (props) => {
          <textarea onChange = {()=>{
             let newText = newPostElemet.current.value;
             props.newPostChange(newText)
-            }} 
-            placeholder = "Write something and post it!" value = {props.newPostText} ref = {newPostElemet} ></textarea>
+            }} placeholder = "Write something and post it!" value = {props.newPostText} ref = {newPostElemet} ></textarea>
          <button onClick = {props.newPost} className={classes.content__button}>Post it</button> 
       </div>
    )

@@ -12,8 +12,7 @@ const Content = (props) => {
          <img src = "https://via.placeholder.com/1000x200" alt = "wrapper" className = 'content__img'/>
          <Profile name = 'Alexei' date = '16.03.1995' web = 'alg.by' family = 'Married'/>
          <Post__new__container addPost = {props.addPost} updateNewPostText = {props.updateNewPostText} 
-          dispatch = {props.dispatch} 
-          newPostText = {props.data.newPostText}
+         // dispatch = {props.dispatch} newPostText = {props.data.newPostText}
          />
          <Post__prev changeLikes = {props.changeLikes} posts = {props.data.posts}/>
       </div>

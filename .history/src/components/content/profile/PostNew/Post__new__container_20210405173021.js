@@ -25,9 +25,7 @@ const Post__new__container = (props) => {
 
    let newPostChange = (newText) => {
       //props.updateNewPostText(newText);
-
       props.dispatch(newTextChangActionCreator(newText));
-      
    }
 
    return(
