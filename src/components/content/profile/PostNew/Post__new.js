@@ -1,5 +1,4 @@
 import React from 'react';
-import { addPostActionCreator, newTextChangActionCreator } from '../../../../redax/profile-reducer';
 
 import classes from './post__new.module.css';
 
@@ -21,12 +20,14 @@ const Post__new = (props) => {
    let newPostElemet = React.createRef();
 
    let newPost = () => {
-      props.dispatch(addPostActionCreator());
+      //props.dispatch(addPostActionCreator());
+      props.newPost()
    }
 
    let newPostOnChange = () => {
       let newText = newPostElemet.current.value;
-      props.dispatch(newTextChangActionCreator(newText));
+      props.newPostChange(newText);
+      //props.dispatch(newTextChangActionCreator(newText));
    }
 
    return(

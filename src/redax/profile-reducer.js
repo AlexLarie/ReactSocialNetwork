@@ -1,8 +1,15 @@
 const ADD_POST = 'ADD-POST';
 const NEW_TEXT_CHANGE = 'NEW-TEXT-CHANGE';
 
-const profileReducer = (state, action) => {
-   
+let initialState = {
+   posts: [
+      
+   ],
+   newPostText : "",
+   lastId : "5"
+} 
+
+const profileReducer = (state = initialState, action) => {
    switch (action.type) {
       case ADD_POST:
          state.lastId++
@@ -15,7 +22,7 @@ const profileReducer = (state, action) => {
          }
          if (newPost.text != false){
             state.posts.push(newPost);
-            // this._state.newsPage.news.push(newPost);
+            // this._state.newsPage.news.push(newPost); 
          }
          state.newPostText = '';
          break;

@@ -1,7 +1,30 @@
 const CREATE_NEW_MESSAGE_ITEM = 'CREATE-NEW-MESSAGE-ITEM';
 const CHANGE_NEW_MESSAGE = 'CHANGE-NEW-MESSAGE';
 
-const dialogsReducer = (state, action) => {
+let initialState = {
+   messages: [
+      
+   ],
+   dialogs: [
+      {id : "1",
+      name : "Kristina"},
+      {id : "2",
+      name : "Aliaksei"},
+      {id : "3",
+      name : "Kastus"},
+      {id : "4",
+      name : "Kirill"},
+      {id : "5",
+      name : "Andrey"},
+      {id : "6",
+      name : "Vadim"},
+      {id : "7",
+      name : "Vlad"},
+   ],
+   newMessage : "",
+}
+
+const dialogsReducer = (state = initialState, action) => {
 
 
    switch (action.type) {

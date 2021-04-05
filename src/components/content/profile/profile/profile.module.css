@@ -14,4 +14,5 @@
 .profile img{
    border-radius: 50%;
    overflow: hidden;
+   max-width: 100px;
 }
